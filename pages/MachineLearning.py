@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
-import sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split
+import pickle
 rfmodel= st.sidebar.checkbox('Random Forest Classification')
 data = pd.read_csv('water_potability.csv')
 if rfmodel: 
@@ -23,5 +24,12 @@ if rfmodel:
           x=data.drop("Potability",axis=1)
           y=data["Potability"]
           x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
-          filename = 'gnbmodel'
+          filename = 'randommodel'
+          loaded_model = pickle.load(open(filename, "rb"))
+          testsdata2 =  features.reindex(columns =  x_train.columns, fill_value=0)
+          y_pred = loaded_model.predict(testsdata2)
+          if y_pred==1 :
+              st.write("This is pure water that can drink.")
+          else:
+              st.subheader("This is not pure water that can happen disadvantages.") 
                    
