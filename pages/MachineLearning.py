@@ -1,10 +1,20 @@
 import pandas as pd
 import streamlit as st
 
-df = pd.read_csv("water_potability.csv")
-ph = st.number_input("Enter pH Level:")
-st.write(ph)
-hard = st.number_input("Enter amount of Hardness:")
-st.write(hard)
-solid = st.number_input("Enter amount of Solids:")
-st.write(solid)
+rfmodel= st.sidebar.checkbox('Random Forest Classification')
+data = pd.read_csv('water_potability.csv')
+if rfmodel: 
+    with st.form("my_form1"):     
+        st.title('Classify the water potatbility')
+        ph = st.number_input("Enter pH Level:")
+        hard = st.number_input("Enter amount of Hardness:")
+        solid = st.number_input("Enter amount of Solids:")
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+          inputdata = {}                  
+          features = pd.DataFrame(inputdata,index=[0])         
+          x=data.drop("Suggested Job Role",axis=1)
+          y=data["Suggested Job Role"]
+          x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
+          filename = 'gnbmodel'
+                   
