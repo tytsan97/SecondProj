@@ -26,10 +26,7 @@ if rfmodel:
           y=data["Potability"]
           X_train, X_test, Y_train, Y_test = train_test_split(x,y,test_size=0.25, random_state=25)
           rdm_model = RandomForestClassifier()
-          rdm_model.fit(X_train, Y_train)
-          
-          rfc_accuracy = accuracy_score(Y_test,rdm_pred)
-          
+          rdm_model.fit(X_train,Y_train)                 
           testsdata2 =  features.reindex(columns =  X_train.columns, fill_value=0)
           y_pred = rdm_model.predict(testsdata2)
           if y_pred==1 :
@@ -37,5 +34,6 @@ if rfmodel:
           else:
               st.subheader("This is not pure water that can happen disadvantages.")
           st.header("Accuracy Score")
+          rfc_accuracy = accuracy_score(Y_test,y_pred)
           st.subheader(rfc_accuracy)
                    
