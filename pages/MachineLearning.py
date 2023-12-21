@@ -24,7 +24,7 @@ if rfmodel:
           features = pd.DataFrame(inputdata,index=[0])         
           x=data.drop("Potability",axis=1)
           y=data["Potability"]
-          x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
+          X_train, X_test, Y_train, Y_test = train_test_split(x,y,test_size=0.25, random_state=25)
           rdm_model = RandomForestClassifier()
           rdm_model.fit(X_train, Y_train)
           rdm_pred = rdm_model.predict(X_test)
