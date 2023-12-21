@@ -30,7 +30,7 @@ if rfmodel:
           
           rfc_accuracy = accuracy_score(Y_test,rdm_pred)
           
-          testsdata2 =  features.reindex(columns =  x_train.columns, fill_value=0)
+          testsdata2 =  features.reindex(columns =  X_train.columns, fill_value=0)
           y_pred = rdm_model.predict(testsdata2)
           if y_pred==1 :
               st.write("This is pure water that can drink.")
