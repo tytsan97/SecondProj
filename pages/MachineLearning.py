@@ -25,9 +25,13 @@ if rfmodel:
           y=data["Potability"]
           x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
           filename = 'randommodel'
+          with open(filename, 'rb') as f:
+                u = pickle._Unpickler(f)
+                
+                p = u.load()
           loaded_model = pickle.load(open(filename, "rb"))
           testsdata2 =  features.reindex(columns =  x_train.columns, fill_value=0)
-          y_pred = loaded_model.predict(testsdata2)
+          y_pred = p.predict(testsdata2)
           if y_pred==1 :
               st.write("This is pure water that can drink.")
           else:
