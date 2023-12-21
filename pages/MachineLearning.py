@@ -21,7 +21,10 @@ if rfmodel:
         if submitted:
           inputdata = {'ph':ph,'Hardness':hard,'Solids':solid,'Chloramines':ch4,'Sulfate':so4,'Conductivity':conduct,
                       'Organic_carbon':carbon,'Trihalomethanes':trihalo,'Turbidity':turbi}                  
-          features = pd.DataFrame(inputdata,index=[0])         
+          features = pd.DataFrame(inputdata,index=[0])
+          data['ph'] = data['ph'].fillna(value=data['ph'].median())
+          data['Sulfate'] = data['Sulfate'].fillna(value=data['Sulfate'].median())
+          data['Trihalomethanes'] = data['Trihalomethanes'].fillna(value=data['Trihalomethanes'].median())
           x=data.drop("Potability",axis=1)
           y=data["Potability"]
           X_train, X_test, Y_train, Y_test = train_test_split(x,y,test_size=0.25, random_state=25)
