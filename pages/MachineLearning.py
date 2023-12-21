@@ -1,7 +1,8 @@
 import pandas as pd
 import streamlit as st
 from sklearn.model_selection import train_test_split
-import pickle
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report,confusion_matrix,accuracy_score
 rfmodel= st.sidebar.checkbox('Random Forest Classification')
 data = pd.read_csv('water_potability.csv')
 if rfmodel: 
@@ -24,16 +25,17 @@ if rfmodel:
           x=data.drop("Potability",axis=1)
           y=data["Potability"]
           x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
-          filename = 'randommodel'
-          with open(filename, 'rb') as f:
-                u = pickle._Unpickler(f)
-                
-                p = u.load()
-          loaded_model = pickle.load(open(filename, "rb"))
+          rdm_model = RandomForestClassifier()
+          rdm_model.fit(X_train, Y_train)
+          rdm_pred = rdm_model.predict(X_test)
+          rfc_accuracy = accuracy_score(Y_test,rdm_pred)
+          accuracy=round(rfc_accuracy*100)
           testsdata2 =  features.reindex(columns =  x_train.columns, fill_value=0)
-          y_pred = p.predict(testsdata2)
+          y_pred = rdm_model.predict(testsdata2)
           if y_pred==1 :
               st.write("This is pure water that can drink.")
           else:
-              st.subheader("This is not pure water that can happen disadvantages.") 
+              st.subheader("This is not pure water that can happen disadvantages.")
+          st.header("Accuracy Score %")
+          st.subheader(accuracy)
                    
