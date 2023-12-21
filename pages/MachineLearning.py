@@ -37,6 +37,6 @@ if rfmodel:
           else:
               st.subheader("This is not pure water that can happen disadvantages.")
           st.header("Accuracy Score")
-          rfc_accuracy = accuracy_score(Y_test,y_pred)
-          st.subheader(rfc_accuracy)
+          
+          st.subheader(accuracy_score(Y_test,y_pred))
                    
