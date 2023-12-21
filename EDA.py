@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import plotly.express as px
+import plotly as px
 
 data= pd.read_csv("water_potability.csv")
 st.title("Data Visualization for Water Quality Classification")
