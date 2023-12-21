@@ -7,8 +7,14 @@ if rfmodel:
     with st.form("my_form1"):     
         st.title('Classify the water potatbility')
         ph = st.number_input("Enter pH Level:")
-        hard = st.number_input("Enter amount of Hardness:")
-        solid = st.number_input("Enter amount of Solids:")
+        hard = st.number_input("Enter Amount of Hardness:")
+        solid = st.number_input("Enter Amount of Solids:")
+        ch4 = st.number_input("Enter Amount of Chloromines:")
+        so4 = st.number_input("Enter Amount of Sulfate:")
+        conduct = st.number_input("Enter Amount of Conductivity:")
+        carbon = st.number_input("Enter Amount of Organic Carbon:")
+        trihalo = st.number_input("Enter Amount of Trihalomethanes:")
+        turbi = st.number_input("Enter Amount of Turbidity:")
         submitted = st.form_submit_button("Submit")
         if submitted:
           inputdata = {}                  
