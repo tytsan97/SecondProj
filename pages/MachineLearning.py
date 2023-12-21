@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-
+import sklearn.model_selection import train_test_split
 rfmodel= st.sidebar.checkbox('Random Forest Classification')
 data = pd.read_csv('water_potability.csv')
 if rfmodel: 
