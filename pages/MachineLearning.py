@@ -36,7 +36,5 @@ if rfmodel:
               st.write("This is pure water that can drink.")
           else:
               st.subheader("This is not pure water that can happen disadvantages.")
-          st.header("Accuracy Score")
           
-          st.subheader(accuracy_score(Y_test,y_pred))
                    
