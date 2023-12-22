@@ -33,8 +33,10 @@ if rfmodel:
           testsdata2 =  features.reindex(columns =  X_train.columns, fill_value=0)
           y_pred = rdm_model.predict(testsdata2)
           if y_pred==1 :
-              st.write("This is pure water that can drink.")
+              st.success("This is pure water that can drink.")
+              rain(emoji="????",font_size=20,falling_speed=3,animation_length="infinite",)
           else:
-              st.subheader("This is not pure water that can happen disadvantages.")
+              st.warning("This is not pure water that can happen disadvantages.")
+               rain(emoji="????",font_size=20,falling_speed=3,animation_length="infinite",)
           
                    
