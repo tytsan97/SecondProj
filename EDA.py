@@ -10,4 +10,5 @@ st.write(data.shape)
 st.header('Distribution of Classes')
 fig = px.histogram(data['Potability'])
 st.plotly_chart(fig)
-
+fig1 = px.scatter(data,x='ph',y='Sulfate',color="Potability")
+plotly_events(fig1)
