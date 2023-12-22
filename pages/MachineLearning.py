@@ -34,9 +34,10 @@ if rfmodel:
           y_pred = rdm_model.predict(testsdata2)
           if y_pred==1 :
               st.success("This is pure water that can drink.")
-              rain(emoji="????",font_size=20,falling_speed=3,animation_length="infinite",)
+              st.balloons()
+              st.progress(10)
           else:
               st.warning("This is not pure water that can happen disadvantages.")
-              rain(emoji="????",font_size=20,falling_speed=3,animation_length="infinite",)
+              
           
                    
