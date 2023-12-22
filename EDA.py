@@ -8,4 +8,6 @@ st.subheader("Dataset Shape")
 st.write(data.shape)
 
 st.header('Distribution of Classes')
+fig = px.histogram(mydata['Potability'])
+st.plotly_chart(fig)
 
