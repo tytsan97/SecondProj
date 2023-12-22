@@ -38,6 +38,7 @@ if rfmodel:
               st.progress(10)
           else:
               st.warning("This is not pure water that can happen disadvantages.")
-              
+              st.balloons()
+              st.progress(10)
           
                    
