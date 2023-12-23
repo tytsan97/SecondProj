@@ -8,4 +8,5 @@ st.subheader("Dataset Shape")
 st.write(data.shape)
 
 st.header('Distribution of Target')
-st.bar_chart(data['Potability'])
+fig = px.histogram(data['Potability'])
+st.plotly_chart(fig)
