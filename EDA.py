@@ -8,7 +8,11 @@ st.subheader("Dataset Shape")
 st.write(data.shape)
 
 st.header('Distribution of Target')
-plot = sns.heatmap(data.corr(), annot=True)
- 
-# Display the plot in Streamlit
-st.pyplot(plot.get_figure())
+hist_data = data['Potability']
+
+
+# Create distplot with custom bin_size
+fig = ff.create_distplot(hist_data)
+
+# Plot!
+st.plotly_chart(fig, use_container_width=True)
