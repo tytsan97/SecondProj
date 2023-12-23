@@ -21,12 +21,12 @@ corr
 st.header("Factors Affecting Water Quality:pH")
 fig = px.histogram(data,x="ph",color="Potability")
 fig
-st.write()
+st.write("pH level between 6.5 and 8.5 can drink water.")
 st.header("Factors Affecting Water Quality:Solid")
 fig = px.histogram(data,x="Solids",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality: Sulfate")
+st.header("Factors Affecting Water Quality:Sulfate")
 fig = px.histogram(data,x="Sulfate",color="Potability")
 fig
 st.write()
@@ -34,7 +34,7 @@ st.header("Factors Affecting Water Quality:Chloramines")
 fig = px.histogram(data,x="Chloramines",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality: Organic Carbon")
+st.header("Factors Affecting Water Quality:Organic_Carbon")
 fig = px.histogram(data,x="Organic_carbon",color="Potability")
 fig
 st.write()
@@ -51,7 +51,3 @@ fig = px.histogram(data,x="Conductivity",color="Potability")
 fig
 st.write()
 
-st.header("Factors Affecting Water Quality:")
-fig = px.histogram(data,x="ph",color="Potability")
-fig
-st.write()
