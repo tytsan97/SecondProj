@@ -8,5 +8,7 @@ st.subheader("Dataset Shape")
 st.write(data.shape)
 
 st.header('Distribution of Target')
-plot = sns.pairplot(data)
-st.pyplot(plot.fig)
+plot = sns.heatmap(df.corr(), annot=True)
+ 
+# Display the plot in Streamlit
+st.pyplot(plot.get_figure())
