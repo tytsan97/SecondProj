@@ -18,5 +18,43 @@ st.subheader("This is unbalance distribution , 0 values is more than 1 values.")
 st.header("Correlation Features and Target")
 corr=pd.DataFrame(data.corr())
 corr
+st.header("Factors Affecting Water Quality:pH")
 fig = px.histogram(data,x="ph",color="Potability")
 fig
+st.write()
+st.header("Factors Affecting Water Quality:Solid")
+fig = px.histogram(data,x="Solids",color="Potability")
+fig
+st.write()
+st.header("Factors Affecting Water Quality: Sulfate")
+fig = px.histogram(data,x="Sulfate",color="Potability")
+fig
+st.write()
+st.header("Factors Affecting Water Quality:")
+fig = px.histogram(data,x="ph",color="Potability")
+fig
+st.write()
+st.header("Factors Affecting Water Quality:")
+fig = px.histogram(data,x="ph",color="Potability")
+fig
+st.write()
+st.header("Factors Affecting Water Quality:")
+fig = px.histogram(data,x="ph",color="Potability")
+fig
+st.write()
+st.header("Factors Affecting Water Quality:")
+fig = px.histogram(data,x="ph",color="Potability")
+fig
+st.write()
+st.header("Factors Affecting Water Quality:")
+fig = px.histogram(data,x="ph",color="Potability")
+fig
+st.write()
+st.header("Factors Affecting Water Quality:")
+fig = px.histogram(data,x="ph",color="Potability")
+fig
+st.write()
+st.header("Factors Affecting Water Quality:")
+fig = px.histogram(data,x="ph",color="Potability")
+fig
+st.write()
