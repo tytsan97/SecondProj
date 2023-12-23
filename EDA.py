@@ -21,11 +21,11 @@ corr
 st.header("Factors Affecting Water Quality:pH")
 fig = px.histogram(data,x="ph",color="Potability")
 fig
-st.write("pH level between 6.5 and 8.5 can drink water.")
+st.write("The pH value of drinking water should be between 6.5 and 8.5.")
 st.header("Factors Affecting Water Quality:Solid")
 fig = px.histogram(data,x="Solids",color="Potability")
 fig
-st.write()
+st.write(Water with a very high number of dissolved solids is highly mineralized.)
 st.header("Factors Affecting Water Quality:Sulfate")
 fig = px.histogram(data,x="Sulfate",color="Potability")
 fig
