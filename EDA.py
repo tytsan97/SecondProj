@@ -8,6 +8,5 @@ st.subheader("Dataset Shape")
 st.write(data.shape)
 
 st.header('Distribution of Target')
-fig, ax = plt.subplots()
-sns.heatmap(data.corr(), ax=ax)
-st.write(fig)
+plot = sns.pairplot(data)
+st.pyplot(plot.fig)
