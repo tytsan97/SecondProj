@@ -8,4 +8,4 @@ st.subheader("Dataset Shape")
 st.write(data.shape)
 
 st.header('Distribution of Target')
-st.bar_chart(data)
+st.bar_chart(data['Potability'])
