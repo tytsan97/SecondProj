@@ -8,11 +8,4 @@ st.subheader("Dataset Shape")
 st.write(data.shape)
 
 st.header('Distribution of Target')
-hist_data = data['Potability']
-
-
-# Create distplot with custom bin_size
-fig = ff.create_distplot(hist_data)
-
-# Plot!
-st.plotly_chart(fig, use_container_width=True)
+st.bar_chart(data)
