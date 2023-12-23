@@ -9,9 +9,7 @@ st.subheader("Dataset Shape")
 st.write(data.shape)
 
 st.header('Distribution of Target')
-fig = px.histogram(data['Potability'])
-st.plotly_chart(fig)
 fig, ax = plt.subplots()
 ax.hist(data['Potability'])
-
 st.pyplot(fig)
+st.write("Thisisunbalancedistribution,0ismorethan1.")
