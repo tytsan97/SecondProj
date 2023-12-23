@@ -30,30 +30,27 @@ st.header("Factors Affecting Water Quality: Sulfate")
 fig = px.histogram(data,x="Sulfate",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality:")
-fig = px.histogram(data,x="ph",color="Potability")
+st.header("Factors Affecting Water Quality:Chloramines")
+fig = px.histogram(data,x="Chloramines",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality:")
-fig = px.histogram(data,x="ph",color="Potability")
+st.header("Factors Affecting Water Quality: Organic Carbon")
+fig = px.histogram(data,x="Organic_carbon",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality:")
-fig = px.histogram(data,x="ph",color="Potability")
+st.header("Factors Affecting Water Quality:Trihalomethanes")
+fig = px.histogram(data,x="Trihalomethanes",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality:")
-fig = px.histogram(data,x="ph",color="Potability")
+st.header("Factors Affecting Water Quality: Turbidity")
+fig = px.histogram(data,x="Turbidity",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality:")
-fig = px.histogram(data,x="ph",color="Potability")
+st.header("Factors Affecting Water Quality: Conductivity")
+fig = px.histogram(data,x="Conductivity",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality:")
-fig = px.histogram(data,x="ph",color="Potability")
-fig
-st.write()
+
 st.header("Factors Affecting Water Quality:")
 fig = px.histogram(data,x="ph",color="Potability")
 fig
