@@ -12,7 +12,7 @@ hist_data = data['Potability']
 
 
 # Create distplot with custom bin_size
-fig = ff.create_distplot(hist_data)
+fig = px.create_distplot(hist_data)
 
 # Plot!
 st.plotly_chart(fig, use_container_width=True)
