@@ -1,4 +1,3 @@
-
 import pandas as pd
 import streamlit as st
 import plotly.express as px
@@ -15,4 +14,4 @@ ax.hist(data['Potability'])
 st.pyplot(fig)
 st.write("Thisisunbalancedistribution,0ismorethan1.")
 corr=pd.DataFrame(data.corr())
-st.subheader(corr)
+corr
