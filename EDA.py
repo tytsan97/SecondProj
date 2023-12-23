@@ -12,6 +12,7 @@ st.header('Distribution of Target')
 fig, ax = plt.subplots()
 ax.hist(data['Potability'])
 st.pyplot(fig)
-st.write("Thisisunbalancedistribution,0ismorethan1.")
+st.subheader("This is unbalance distribution , 0 values is more than 1 values.")
+st.header("Correlation Features and Target")
 corr=pd.DataFrame(data.corr())
 corr
