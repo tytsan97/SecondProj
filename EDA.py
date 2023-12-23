@@ -18,3 +18,5 @@ st.subheader("This is unbalance distribution , 0 values is more than 1 values.")
 st.header("Correlation Features and Target")
 corr=pd.DataFrame(data.corr())
 corr
+fig = px.histogram(data,x="ph",color="Potability")
+fig
