@@ -15,6 +15,8 @@ fig, ax = plt.subplots()
 ax.hist(data['Potability'])
 st.pyplot(fig)
 st.subheader("This is unbalance distribution , 0 values is more than 1 values.")
+st.header("Statistical Value")
+data.describe()
 st.header("Correlation Features and Target")
 corr=pd.DataFrame(data.corr())
 corr
