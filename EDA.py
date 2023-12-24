@@ -20,27 +20,27 @@ data.describe()
 st.header("Correlation Features and Target")
 corr=pd.DataFrame(data.corr())
 corr
-st.header("Factors Affecting Water Quality:pH")
+st.header("Factors Affecting Water Quality: pH")
 fig = px.histogram(data,x="ph",color="Potability")
 fig
-st.write("The pH value of drinking water should be between 6.5 and 8.5.")
-st.header("Factors Affecting Water Quality:Solid")
+
+st.header("Factors Affecting Water Quality: Solid")
 fig = px.histogram(data,x="Solids",color="Potability")
 fig
-st.write(Water with a very high number of dissolved solids is highly mineralized.)
-st.header("Factors Affecting Water Quality:Sulfate")
+
+st.header("Factors Affecting Water Quality: Sulfate")
 fig = px.histogram(data,x="Sulfate",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality:Chloramines")
+st.header("Factors Affecting Water Quality: Chloramines")
 fig = px.histogram(data,x="Chloramines",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality:Organic_Carbon")
+st.header("Factors Affecting Water Quality: Organic_Carbon")
 fig = px.histogram(data,x="Organic_carbon",color="Potability")
 fig
 st.write()
-st.header("Factors Affecting Water Quality:Trihalomethanes")
+st.header("Factors Affecting Water Quality: Trihalomethanes")
 fig = px.histogram(data,x="Trihalomethanes",color="Potability")
 fig
 st.write()
