@@ -33,11 +33,11 @@ if rfmodel:
           testsdata2 =  features.reindex(columns =  X_train.columns, fill_value=0)
           y_pred = rdm_model.predict(testsdata2)
           if y_pred==1 :
-              st.success("This is pure water that can drink.")
+              st.success("This is safe water. It can drink.")
               st.balloons()
               st.progress(10)
           else:
-              st.warning("This is not pure water that can happen disadvantages.")
+              st.warning("This is unsafe water. It shouldn't drink.")
               st.balloons()
               st.progress(10)
           
