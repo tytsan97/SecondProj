@@ -20,7 +20,9 @@ num=data.describe()
 st.write(num)
 st.header("Correlation Features and Target")
 corr=pd.DataFrame(data.corr())
-corr
+fig = px.imshow(corr, text_auto=True, aspect="auto")
+fig.show()
+
 st.header("Factors Affecting Water Quality: pH")
 fig = px.histogram(data,x="ph",color="Potability")
 fig
