@@ -7,7 +7,7 @@ rfmodel= st.sidebar.checkbox('Random Forest Classification')
 data = pd.read_csv('water_potability.csv')
 if rfmodel: 
     with st.form("my_form1"):     
-        st.title('Classify the water potatbility')
+        st.title('Classify The Water Potatbility')
         ph = st.number_input("Enter pH Level:")
         hard = st.number_input("Enter Amount of Hardness:")
         solid = st.number_input("Enter Amount of Solids:")
