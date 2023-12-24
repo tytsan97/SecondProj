@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-import plotly.figure_factory as ff
+
 import matplotlib.pyplot as plt
 data= pd.read_csv("water_potability.csv")
 st.title("Data Visualization for Water Quality Classification")
@@ -16,7 +16,8 @@ ax.hist(data['Potability'])
 st.pyplot(fig)
 st.subheader("This is unbalance distribution , 0 values is more than 1 values.")
 st.header("Statistical Value")
-data.describe()
+num=data.describe()
+st.write(num)
 st.header("Correlation Features and Target")
 corr=pd.DataFrame(data.corr())
 corr
