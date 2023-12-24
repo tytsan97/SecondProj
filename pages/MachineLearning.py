@@ -16,7 +16,7 @@ if rfmodel:
         conduct = st.number_input("Enter Amount of Conductivity:")
         carbon = st.number_input("Enter Amount of Organic Carbon:")
         trihalo = st.number_input("Enter Amount of Trihalomethanes:")
-        turbi = st.number_input("Enter Amount of Turbidity:")
+        turbi = st.number_input("Enter Turbidity Level:")
         submitted = st.form_submit_button("Submit")
         if submitted:
           inputdata = {'ph':ph,'Hardness':hard,'Solids':solid,'Chloramines':ch4,'Sulfate':so4,'Conductivity':conduct,
